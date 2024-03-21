@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  text-align: center;
+  background-image: url('love.jpg');
+  /* Add font-family declaration */
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  position: relative; /* Set position relative for absolute positioning of pseudo-elements */
+  font-size: 3rem;
+  color: #033b47;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+@keyframes lightning {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.container {
+  margin-top: -80px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Adjust the height of the main container */
+}
+
+.left-container {
+  padding: 20px;
+  text-align: right; /* Align content to the right within the left container */
+}
+
+.right-container {
+  margin-left: 100px;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: left; /* Align content to the left within the right container */
+}
+.hello-text {
+  color: #033b47;
+  font-size: 3rem; /* Set the color of "HELLO" */
+}
+.ai-text {
+  color: #830705;
+  font-size: 4rem; /* Set the color of "I AM your Doctor AI assistant." to blue */
+}
+.about-text {
+  color: #033b47;
+  font-size: 2rem; /* Set the color of the text to red */
+}
+.upohar{
+  color: #570240;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  margin-left: 200px;
+  font-size: 2rem;
+  background-color: #8b1d04; /* Blue color for the button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: #034d51; /* Darker blue color on hover */
+}
+
+.bot-image {
+  width: 350px; /* Adjust the width of the bot image as needed */
+  height: auto;
+  margin-right: 10px; 
+  margin-left: 100px;
+  margin-top: -70px;
+  border: 2px solid transparent; /* Add a transparent border to reserve space for the lightning effect */
+  border-radius: 10px; /* Adjust the border radius as needed */
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.5), /* White glow effect */
+    0 0 30px rgba(255, 255, 255, 0.5), /* White glow effect */
+    0 0 40px rgba(255, 255, 255, 0.5), /* White glow effect */
+    0 0 70px #c27895, /* Blue lightning effect */
+    0 0 100px #c27895, /* Blue lightning effect */
+    0 0 150px #c27895; /* Blue lightning effect */
+  animation: lightning 1.5s infinite linear; /* Animation for lightning effect */
+  transform-style: preserve-3d; /* Apply 3D transformations */
+  perspective: 1000px; 
+}
+
+@keyframes lightning {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotateY(20deg) rotateX(20deg) translateZ(40px);
+  }
+  100% {
+    transform: rotateY(-20deg) rotateX(-20deg) translateZ(2px);
+  }
+  
+  0% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.5),
+      0 0 70px #c27895,
+      0 0 100px #c27895,
+      0 0 150px #c27895;
+  }
+  50% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.5),
+      0 0 70px #c27895,
+      0 0 100px #c27895,
+      0 0 150px #c27895;
+  }
+  100% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.5),
+      0 0 70px #c27895,
+      0 0 100px #c27895,
+      0 0 150px #c27895;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Change to column layout for smaller screens */
+  }
+
+
+  .bot-image {
+    width: 50%;
+    margin-top: 90px;
+    margin-right:65px;
+    margin-left: -30px; /* Adjust the width of the bot image to take full width */
+  }
+  
+  .right-container {
+    margin-left: -10px; /* Remove the left margin */
+    text-align: center; /* Center the content in the right container */
+    margin-top: -35px;
+    font-size: .9em; 
+  }
+  .start-button {
+    margin-top: 5px; /* Adjust the top margin of the button */
+    margin-left: auto; /* Center the button horizontally */
+    margin-right: auto;
+    padding: 8px 15px;
+    font-size: 1.2rem;
+  }
+  .title{
+    font-size: 1.5rem;
+  }
+  .hello-text{
+    font-size: 1.3rem;
+  }
+  .ai-text{
+    font-size: 1.5rem;
+  }
+  .about-text{
+    font-size: 1rem;
+  }
+  .upohar{
+    font-size: 1rem;
+  }
+}
+
