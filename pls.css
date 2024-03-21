@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Smooth color background */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.picture-frame {
+    border: 10px solid #555; /* Nice frame */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff; /* White background inside the frame */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 90%; /* Adjust max-width as needed */
+    max-height: 90vh; /* Adjust max-height as needed */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.picture-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .picture-frame {
+        border-width: 5px; /* Reduce border width for smaller screens */
+        border-radius: 5px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .picture-frame {
+        max-width: 80%; /* Adjust max-width for smaller screens */
+    }
+}

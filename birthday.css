@@ -2,7 +2,7 @@
 
 body {
   text-align: center;
-  background-image: url('love.jpg');
+  background-color: aliceblue;
   /* Add font-family declaration */
   font-family: 'Roboto', sans-serif;
 }
